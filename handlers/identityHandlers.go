@@ -6,7 +6,9 @@ import (
 )
 
 func CreateNewUserHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Create User: /identity/create")
+	message := "Create User: /identity/create"
+    w.WriteHeader(http.StatusOK)
+    w.Write([]byte(message))
 }
 
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
